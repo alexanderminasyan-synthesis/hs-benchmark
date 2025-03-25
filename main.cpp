@@ -23,8 +23,7 @@ static const size_t chunk_size = fs_alignment * 25; // 100K
 static int n_files;  // Will be set from file list
 static int reads_per_file;  // Will be set from command line
 static size_t max_file_size;  // Will be set from command line
-//static const bool with_lseek = true;                                                                                                                                                                                                                                                                                                                                      
-static const int offset = fs_alignment*10;//1024*100;                                                                                                                                                                                                                                                                                                                               
+static const int offset = fs_alignment*10;//1024*100;
 
 void thread_read_lseek(std::atomic<int>& index, const size_t end, void* read_buffer, const std::vector<int>& fds) {
 
